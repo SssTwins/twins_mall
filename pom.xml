@@ -22,11 +22,12 @@
         <spring.cloud-version>2020.0.0</spring.cloud-version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <lombok.version>1.18.20</lombok.version>
+        <java-jwt.version>3.16.0</java-jwt.version>
     </properties>
 
     <modules>
         <module>twins_gateway</module>
-
+        <module>twins_security</module>
     </modules>
 
     <dependencyManagement>
