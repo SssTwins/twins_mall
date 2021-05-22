@@ -23,6 +23,11 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
     </properties>
 
+    <modules>
+        <module>twins_gateway</module>
+
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>

@@ -42,4 +42,3 @@ dependency-reduced-pom.xml
 *.ipr
 *.iws
 *.idea
-/twins_gateway/.mvn/
