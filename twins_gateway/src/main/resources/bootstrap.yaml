@@ -1,0 +1,43 @@
+server:
+  port: 8301
+
+spring:
+  application:
+    name: twins_gateway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      username: nacos
+      password: liuhao123
+      discovery:
+        server-addr: 47.95.34.144:8848
+        namespace: 4a17c9b0-9b38-44b1-9451-8b6dc4d460b5
+        group: twins
+      config:
+        server-addr: 47.95.34.144:8848
+        file-extension: yaml
+        #指定分组
+        group: dev
+        #指定命名空间
+        namespace: 4a17c9b0-9b38-44b1-9451-8b6dc4d460b5
+
+
+    gateway:
+      globalcors:
+        # gateway 跨域设置
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - OPTIONS
+      # 设置与服务注册发现组件结合，这样可以采用服务名的路由策略
+      discovery:
+        locator:
+          enabled: true
+
